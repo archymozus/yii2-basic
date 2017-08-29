@@ -123,4 +123,9 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+    
+    public function action23()
+    {
+        return $this->render('23');
+    }
 }
