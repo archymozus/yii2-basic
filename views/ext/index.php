@@ -1,25 +1,35 @@
 <?php
-
-use yii\helpers\Html;
-use yii\widgets\LinkPager;
-use app\models\Extensions;
-use app\models\Extension;
-
+namespace app\controllers;
 ?>
-<h1>Ext {$id}</h1>
-<ul>
-<?php 
-
-    foreach ($extensions as $ext): ?>
-    <?php if($ext->type == 'sip') { ?>
-    <li>        
-        <?= Html::a($ext->number, ['ext/ext', 'id' => $ext->id], ['href' => 'profile-link']) ?>:
-        <?= Html::encode("({$ext->name})") ?> :
+<div class="row">
+    <div class="col-sm-2">
+        <?php
         
-        <?= $ext->type ?>
-    </li>
-    <?php }?>
-<?php endforeach; ?>
-</ul>
+        SidebarController::Viewsidebar();
+        ?>
+    </div>
+    <div class="col-sm-offset-2">        
+    </div>
+    <div class="col-sm-8">
 
-<?= LinkPager::widget(['pagination' => $pagination]) ?>
+        <h1>Extensions</h1>
+        <ul>
+            <?php 
+            use yii\helpers\Html;
+            use yii\widgets\LinkPager;
+            use app\models\Extensions;
+            foreach ($extensions as $ext): ?>
+                <?php if ($ext->type == 'sip') { ?>
+                    <li>        
+                        <?= Html::a($ext->number, ['ext/ext', 'id' => $ext->id], ['href' => 'profile-link']) ?>:
+                        <?= Html::encode("({$ext->name})") ?> :
+
+                        <?= $ext->type ?>
+                    </li>
+                <?php } ?>
+            <?php endforeach; ?>
+        </ul>
+
+        <?= LinkPager::widget(['pagination' => $pagination]) ?>
+    </div>
+</div>
