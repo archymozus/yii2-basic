@@ -25,46 +25,46 @@ class SidebarController extends Controller {
                             'items' => [
                                 [
                                     'label' => 'Ссылка 1',
-                                    'url' => ['#'],
+                                    'url' => ['hello'],
                                 ],
                                 [
                                     'label' => 'Ссылка 2',
-                                    'url' => ['#'],
+                                    'url' => ['hello'],
                                 ],
                             ]
                         ],
                         [
-                            'label' => 'Ссылка 3',
-                            'url' => ['#']
+                            'label' => 'Extensions',
+                            'url' => ['ext/index']
                         ],
                         [
                             'label' => 'Ссылка 4',
-                            'url' => ['#'],
+                            'url' => ['hello'],
                         ],
                         [
                             'label' => 'Ссылка 5',
                             'items' => [
                                 [
                                     'label' => 'Ссылка 1',
-                                    'url' => ['#'],
+                                    'url' => ['hello'],
                                 ],
                                 [
                                     'label' => 'Ссылка 2',
-                                    'url' => ['#'],
+                                    'url' => ['hello'],
                                 ],
                             ]
                         ],
                         [
                             'label' => 'Ссылка 6',
-                            'url' => ['#'],
+                            'url' => ['hello'],
                         ],
                         [
                             'label' => 'Ссылка 7',
-                            'url' => ['#']
+                            'url' => ['hello']
                         ],
                         [
                             'label' => 'Ссылка 8',
-                            'url' => ['#'],
+                            'url' => ['hello'],
                         ],
                     ]
                 ]

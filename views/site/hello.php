@@ -8,10 +8,13 @@ namespace app\controllers;
         SidebarController::Viewsidebar();
         ?>
     </div>
-    <div class="col-sm-offset-2">        
-    </div>
-    <div class="col-sm-8">
-        <h1>Добро пожаловать</h1>
+    <div class="col-sm-10">
+        <?php
+
+        use yii\helpers\Html;
+
+echo 'Hello World';
+        ?>
     </div>
 </div>
 
