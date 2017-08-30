@@ -14,7 +14,7 @@ class ExtController extends Controller
         $query = Extensions::find()->where(['type' => 'sip']);
         
         $pagination = new Pagination([
-            'defaultPageSize' => 5,
+            'defaultPageSize' => 10,
             'totalCount' => $query->count(),
         ]);
 
@@ -35,7 +35,7 @@ class ExtController extends Controller
         $query = Extensions::find()->where(['id' => $id]);
         
         $pagination = new Pagination([
-            'defaultPageSize' => 5,
+            'defaultPageSize' => 10,
             'totalCount' => $query->count(),
         ]);
 

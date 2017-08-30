@@ -14,22 +14,22 @@ class SidebarController extends Controller {
                     'items' => [
                         [
                             'label' => 'About',
-                            'url' => ['about']
+                            'url' => ['site/about']
                         ],
                         [
                             'label' => 'Contact',
-                            'url' => ['contact'],
+                            'url' => ['site/contact'],
                         ],
                         [
                             'label' => 'Выпадающий список',
                             'items' => [
                                 [
                                     'label' => 'Ссылка 1',
-                                    'url' => ['hello'],
+                                    'url' => ['site/hello'],
                                 ],
                                 [
                                     'label' => 'Ссылка 2',
-                                    'url' => ['hello'],
+                                    'url' => ['site/hello'],
                                 ],
                             ]
                         ],
@@ -39,32 +39,32 @@ class SidebarController extends Controller {
                         ],
                         [
                             'label' => 'Ссылка 4',
-                            'url' => ['hello'],
+                            'url' => ['site/hello'],
                         ],
                         [
                             'label' => 'Ссылка 5',
                             'items' => [
                                 [
                                     'label' => 'Ссылка 1',
-                                    'url' => ['hello'],
+                                    'url' => ['site/hello'],
                                 ],
                                 [
                                     'label' => 'Ссылка 2',
-                                    'url' => ['hello'],
+                                    'url' => ['site/hello'],
                                 ],
                             ]
                         ],
                         [
                             'label' => 'Ссылка 6',
-                            'url' => ['hello'],
+                            'url' => ['site/hello'],
                         ],
                         [
                             'label' => 'Ссылка 7',
-                            'url' => ['hello']
+                            'url' => ['site/hello']
                         ],
                         [
                             'label' => 'Ссылка 8',
-                            'url' => ['hello'],
+                            'url' => ['site/hello'],
                         ],
                     ]
                 ]
