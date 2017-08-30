@@ -34,8 +34,8 @@ class SidebarController extends Controller {
                             ]
                         ],
                         [
-                            'label' => 'Ссылка 3',
-                            'url' => ['hello']
+                            'label' => 'Extensions',
+                            'url' => ['ext/index']
                         ],
                         [
                             'label' => 'Ссылка 4',
