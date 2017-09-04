@@ -13,22 +13,26 @@ namespace app\controllers;
     <div class="col-sm-8">
 
         <h1>Extensions</h1>
-        <ul>
+        
             <?php 
             use yii\helpers\Html;
             use yii\widgets\LinkPager;
             use app\models\Extensions;
-            foreach ($extensions as $ext): ?>
-                <?php if ($ext->type == 'sip') { ?>
-                    <li>        
-                        <?= Html::a($ext->number, ['ext/ext', 'id' => $ext->id], ['href' => 'profile-link']) ?>:
-                        <?= Html::encode("({$ext->name})") ?> :
+            use yii\grid\GridView;
+            use yii\data\ActiveDataProvider;
 
-                        <?= $ext->type ?>
-                    </li>
-                <?php } ?>
-            <?php endforeach; ?>
-        </ul>
+$dataProvider = new ActiveDataProvider([
+    'query' => Extensions::find(),
+    'pagination' => [
+        'pageSize' => 20,
+    ],
+]);
+echo GridView::widget([
+    'dataProvider' => $dataProvider,
+]);
+?>
+            
+        
 
         <?= LinkPager::widget(['pagination' => $pagination]) ?>
     </div>
