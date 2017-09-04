@@ -11,7 +11,7 @@ class ExtController extends Controller
     public function actionIndex()
     {
         $extensions = Extensions::find()->where(['type' => 'sip'])->orderBy('name')->all();
-        $query = Extensions::find()->where(['type' => 'sip']);
+        $query = \app\models\Extensions::find()->where(['type' => 'sip']);
         
         $pagination = new Pagination([
             'defaultPageSize' => 10,
